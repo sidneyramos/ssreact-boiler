@@ -67,7 +67,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 9);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -136,98 +136,41 @@ var Layout = function Layout(props) {
 /* harmony default export */ __webpack_exports__["a"] = (Layout);
 
 /***/ }),
-/* 4 */
-/***/ (function(module, exports) {
-
-module.exports = require("styled-jsx/style");
-
-/***/ }),
+/* 4 */,
 /* 5 */,
 /* 6 */,
-/* 7 */
+/* 7 */,
+/* 8 */,
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(8);
+module.exports = __webpack_require__(10);
 
 
 /***/ }),
-/* 8 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-
-// EXTERNAL MODULE: external "styled-jsx/style"
-var style_ = __webpack_require__(4);
-var style__default = /*#__PURE__*/__webpack_require__.n(style_);
-
-// EXTERNAL MODULE: external "react"
-var external__react_ = __webpack_require__(0);
-var external__react__default = /*#__PURE__*/__webpack_require__.n(external__react_);
-
-// EXTERNAL MODULE: external "next/link"
-var link_ = __webpack_require__(1);
-var link__default = /*#__PURE__*/__webpack_require__.n(link_);
-
-// EXTERNAL MODULE: ./components/Layout.js
-var Layout = __webpack_require__(3);
-
-// CONCATENATED MODULE: ./components/PostLink.js
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_router__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_next_router___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_next_router__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_Layout_js__ = __webpack_require__(3);
 
 
 
-
-var PostLink_PostLink = function PostLink(_ref) {
-  var post = _ref.post;
-  return external__react__default.a.createElement("li", {
-    className: "jsx-3950785544"
-  }, external__react__default.a.createElement(link__default.a, {
-    as: "/p/".concat(post.id),
-    href: "/post?title=".concat(post.title)
-  }, external__react__default.a.createElement("a", {
-    className: "jsx-3950785544"
-  }, post.title)), external__react__default.a.createElement(style__default.a, {
-    styleId: "3950785544",
-    css: ["li.jsx-3950785544{list-style:none;margin:5px 0;}", "a.jsx-3950785544{-webkit-text-decoration:none;text-decoration:none;color:blue;font-family:\"Arial\";}", "a.jsx-3950785544:hover{opacity:0.6;}"]
-  }));
-};
-
-/* harmony default export */ var components_PostLink = (PostLink_PostLink);
-// CONCATENATED MODULE: ./pages/index.js
-
-
-
-
-
-
-function getPosts() {
-  return [{
-    id: 'hello-nextjs',
-    title: 'Hello Next.js'
-  }, {
-    id: 'learn-nextjs',
-    title: 'Learn Next.js is awesome'
-  }, {
-    id: 'deploy-nextjs',
-    title: 'Deploy apps with ZEIT'
-  }];
-}
-
-/* harmony default export */ var pages = __webpack_exports__["default"] = (function () {
-  return external__react__default.a.createElement(Layout["a" /* default */], null, external__react__default.a.createElement("h1", {
-    className: "jsx-2987328901"
-  }, "My Blog"), external__react__default.a.createElement("ul", {
-    className: "jsx-2987328901"
-  }, getPosts().map(function (post) {
-    return external__react__default.a.createElement(components_PostLink, {
-      key: post.id,
-      post: post
-    });
-  })), external__react__default.a.createElement(style__default.a, {
-    styleId: "2987328901",
-    css: ["h1.jsx-2987328901,a.jsx-2987328901{font-family:\"Arial\";}", "ul.jsx-2987328901{padding:0;}", "li.jsx-2987328901{list-style:none;margin:5px 0;}", "a.jsx-2987328901{-webkit-text-decoration:none;text-decoration:none;color:blue;}", "a.jsx-2987328901:hover{opacity:0.6;}"]
-  }));
+var Page = Object(__WEBPACK_IMPORTED_MODULE_1_next_router__["withRouter"])(function (props) {
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Layout_js__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", null, props.router.query.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", null, "This is the blog post content."));
 });
+/* harmony default export */ __webpack_exports__["default"] = (Page);
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("next/router");
 
 /***/ })
 /******/ ]);
