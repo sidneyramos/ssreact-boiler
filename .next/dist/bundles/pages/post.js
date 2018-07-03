@@ -162,7 +162,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 var Page = Object(__WEBPACK_IMPORTED_MODULE_1_next_router__["withRouter"])(function (props) {
-  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Layout_js__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", null, props.router.query.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", null, "This is the blog post content."));
+  return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Layout_js__["a" /* default */], null, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("h1", null, props.router.query.title), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("p", null, "This is the blog post content blabla."));
 });
 /* harmony default export */ __webpack_exports__["default"] = (Page);
 
