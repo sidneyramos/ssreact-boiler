@@ -8,6 +8,9 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js"
   },
+  "now": {
+    "alias": "ssreact-boiler.now.sh"
+  },
   "keywords": [],
   "author": "Sidney Ramos",
   "license": "ISC",
