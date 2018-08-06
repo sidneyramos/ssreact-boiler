@@ -5,14 +5,40 @@ const linkStyle = {
 }
 
 const Header = () => (
-    <div>
+    <header>
         <Link href="/">
           <a style={linkStyle}>Home</a>
         </Link>
         <Link href="/about">
           <a style={linkStyle}>About</a>
         </Link>
-    </div>
+        <Link href="/contact-us">
+          <a style={linkStyle}>Contact Us</a>
+        </Link>
+        <style jsx global>{`
+          h1, a {
+            font-family: "Arial";
+          }
+
+          ul {
+            padding: 0;
+          }
+
+          li {
+            list-style: none;
+            margin: 5px 0;
+          }
+
+          a {
+            text-decoration: none;
+            color: blue;
+          }
+
+          a:hover {
+            opacity: 0.6;
+          }
+        `}</style>
+    </header>
 )
 
 export default Header
