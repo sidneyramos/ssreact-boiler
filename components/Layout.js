@@ -2,7 +2,7 @@ import Header from './Header'
 
 const Layout = (props) => (
   <div>
-    <Header />
+    <Header title={props.title}/>
     {props.children}
   </div>
 )

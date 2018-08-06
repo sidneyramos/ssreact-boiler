@@ -4,14 +4,14 @@ import PostLink from '../components/PostLink.js'
 
 function getPosts () {
   return [
-    { id: 'hello-nextjs', title: 'Hello Next.js'},
-    { id: 'learn-nextjs', title: 'Learn Next.js is awesome'},
-    { id: 'deploy-nextjs', title: 'Deploy apps with ZEIT'},
+    { id: 'blogpost-1', title: 'Sample Post 1', description: 'This is the first blog post of this blog.'},
+    { id: 'blogpost-2', title: 'Sample Post 2', description: 'This is the second blog post of this blog.'},
+    { id: 'blogpost-3', title: 'Sample Post 3', description: 'This is the third blog post of this blog.'},
   ]
 }
 
 export default () => (
-  <Layout>
+  <Layout title={"Homepage"}>
     <h1>My Blog</h1>
     <ul>
       {getPosts().map((post) => (
