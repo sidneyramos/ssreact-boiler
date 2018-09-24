@@ -24,7 +24,7 @@
 
 @media only screen and (max-width: 1600px)
 {
-	
+
 }
 
 /************
@@ -39,10 +39,10 @@
 		left: auto;
 		right: 79px;
 		bottom: 14px;
-		-webkit-transform: transform: none;
-		-moz-transform: transform: none;
-		-ms-transform: transform: none;
-		-o-transform: transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
 		transform: none;
 	}
 	.main_slider_nav_right
@@ -51,10 +51,10 @@
 		left: auto;
 		right: 39px;
 		bottom: 14px;
-		-webkit-transform: transform: none;
-		-moz-transform: transform: none;
-		-ms-transform: transform: none;
-		-o-transform: transform: none;
+		-webkit-transform: none;
+		-moz-transform: none;
+		-ms-transform: none;
+		-o-transform: none;
 		transform: none;
 	}
 	.main_slider_shapes
@@ -69,7 +69,7 @@
 
 @media only screen and (max-width: 1380px)
 {
-	
+
 }
 
 /************
@@ -95,7 +95,7 @@
 
 @media only screen and (max-width: 1199px)
 {
-	
+
 }
 
 /************
@@ -120,7 +120,7 @@
 
 @media only screen and (max-width: 1024px)
 {
-	
+
 }
 
 /************
@@ -204,7 +204,7 @@
 
 @media only screen and (max-width: 959px)
 {
-	
+
 }
 
 /************
@@ -213,7 +213,7 @@
 
 @media only screen and (max-width: 880px)
 {
-	
+
 }
 
 /************
@@ -222,7 +222,7 @@
 
 @media only screen and (max-width: 768px)
 {
-	
+
 }
 
 /************
@@ -319,7 +319,7 @@
 
 @media only screen and (max-width: 539px)
 {
-	
+
 }
 
 /************
@@ -328,7 +328,7 @@
 
 @media only screen and (max-width: 480px)
 {
-	
+
 }
 
 /************
@@ -484,5 +484,5 @@
 
 @media only screen and (max-width: 400px)
 {
-	
+
 }
