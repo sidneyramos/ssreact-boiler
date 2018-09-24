@@ -18,5 +18,6 @@ export default () => (
         <PostLink key={post.id} post={post}/>
       ))}
     </ul>*/}
+    <h3>This is a homepage</h3>
   </Layout>
 )
