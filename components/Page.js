@@ -56,6 +56,11 @@ class Page extends React.Component {
                   <BigPlayButton position="center" />
                 </Player>
               }
+              {this.props.headerImageUrl &&
+                <div className="image-container">
+                  <img src={this.props.headerImageUrl} />
+                </div>
+              }
             </Col>
           }
         </Row>

@@ -18,7 +18,8 @@ export default () => (
   <Page
     title={"Homepage"}
     heroBannerTitle="Hello, world! This is a homepage."
-    headerVideoUrl="https://storage.googleapis.com/coverr-main/mp4/Travaho.mp4"
+    //headerVideoUrl={"https://storage.googleapis.com/coverr-main/mp4/Travaho.mp4"}
+    headerImageUrl={"/static/images/banner-image.jpeg"}
     >
     {/*<h1>My Blog</h1>
     <ul>
