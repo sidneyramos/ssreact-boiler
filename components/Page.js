@@ -1,37 +1,42 @@
 import React from 'react';
 import Link from 'next/link'
-import Layout from '../components/Layout.js'
-import PostLink from '../components/PostLink.js'
 import classNames from 'classnames';
-import posed from 'react-pose';
+import {
+  Player,
+  BigPlayButton
+} from 'video-react';
 import {
   Jumbotron,
   Container,
-  Button } from 'reactstrap';
-
-const Box = posed.div({
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 }
-});
+  Button,
+  Row,
+  Col
+} from 'reactstrap';
+import Layout from '../components/Layout.js'
+import PostLink from '../components/PostLink.js'
 
 class Page extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { isVisible: true };
+
+    this.state = {
+      playerLoad: false,
+    }
   }
 
   componentDidMount() {
-    setInterval(() => {
-      this.setState({ isVisible: !this.state.isVisible });
-    }, 1000);
+    this.setState({
+      playerLoad: true,
+    });
   }
 
   render() {
     return (
       <Layout title={this.props.title}>
-        <div className={classNames({"col-lg-6": !this.props.headerFullWidth})}>
-          <Jumbotron className={classNames("transparent", "clear-padding")}>
+        <Row>
+          <Col lg={!this.props.headerFullWidth ? 6 : null}>
+            <Jumbotron className={classNames("transparent", "clear-padding")}>
               <h1 className="display-4">{this.props.heroBannerTitle}</h1>
               <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
               <hr className="my-2" />
@@ -40,8 +45,21 @@ class Page extends React.Component {
                 <Button color="primary">Learn More</Button>
               </p>
             </Jumbotron>
-        </div>
-        <Box className="box" pose={this.state.isVisible ? 'visible' : 'hidden'} />
+          </Col>
+          {
+            !this.props.headerFullWidth &&
+            <Col lg="6">
+              {(this.state.playerLoad && this.props.headerVideoUrl) &&
+                <Player
+                  src={this.props.headerVideoUrl}
+                >
+                  <BigPlayButton position="center" />
+                </Player>
+              }
+            </Col>
+          }
+        </Row>
+
         {this.props.children}
       </Layout>
     );

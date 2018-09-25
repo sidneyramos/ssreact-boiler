@@ -29,7 +29,8 @@
     "react-dom": "^16.4.0",
     "react-pose": "^3.3.4",
     "reactstrap": "^6.4.0",
-    "style-loader": "^0.23.0"
+    "style-loader": "^0.23.0",
+    "video-react": "^0.13.0"
   },
   "devDependencies": {
     "animate-sass": "^0.8.2"
