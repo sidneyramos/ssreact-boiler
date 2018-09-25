@@ -1,7 +1,7 @@
 import Header from './Header'
 
 const Layout = (props) => (
-  <div className="super_container">
+  <div className="layout">
     <Header title={props.title}/>
     {props.children}
   </div>

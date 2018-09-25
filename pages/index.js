@@ -2,9 +2,6 @@ import Link from 'next/link'
 import Layout from '../components/Layout.js'
 import PostLink from '../components/PostLink.js'
 
-import "../styles/main_styles.css"
-import "../styles/responsive.css"
-
 
 // function getPosts () {
 //   return [
