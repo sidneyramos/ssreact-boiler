@@ -1,10 +1,11 @@
 import Header from '../components/Header'
-import Layout from '../components/Layout'
+import Page from '../components/Page'
 
 const ContactUs = () => (
-  <Layout title="Contact Us">
-    <h3>This is a contact us page</h3>
-  </Layout>
+  <Page
+    title="Contact Us"
+    heroBannerTitle="This ain't contact us"
+  />
 )
 
 export default ContactUs

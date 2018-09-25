@@ -1,10 +1,11 @@
 import Header from '../components/Header'
-import Layout from '../components/Layout'
+import Page from '../components/Page'
 
 const About = () => (
-  <Layout title="About">
-    <h3>This is an about page</h3>
-  </Layout>
+  <Page
+    title="About"
+    heroBannerTitle="This ain't about us"
+  />
 )
 
 export default About

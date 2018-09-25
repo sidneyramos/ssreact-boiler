@@ -1,7 +1,10 @@
 import Link from 'next/link'
-import Layout from '../components/Layout.js'
+import Page from '../components/Page.js'
 import PostLink from '../components/PostLink.js'
-
+import {
+  Jumbotron,
+  Container,
+  Button } from 'reactstrap';
 
 // function getPosts () {
 //   return [
@@ -12,13 +15,16 @@ import PostLink from '../components/PostLink.js'
 // }
 
 export default () => (
-  <Layout title={"Homepage"}>
+  <Page
+    title={"Homepage"}
+    heroBannerTitle="Hello, world! This is a homepage."
+    >
     {/*<h1>My Blog</h1>
     <ul>
       {getPosts().map((post) => (
         <PostLink key={post.id} post={post}/>
       ))}
     </ul>*/}
-    <h3>This is a homepage</h3>
-  </Layout>
+
+  </Page>
 )

@@ -12,23 +12,26 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
+  Container,
   DropdownItem } from 'reactstrap';
-import '../styles/main_styles.scss'
 import 'bootstrap/scss/bootstrap.scss';
+import 'animate-sass/_animate.scss'
+import '../styles/Main.scss'
+import '../styles/Header.scss'
 
 class Header extends React.Component {
   constructor (props) {
     super(props)
 
-    this.toggle = this.toggle.bind(this);
+    this.navToggle = this.navToggle.bind(this);
     this.state = {
-      isOpen: false
+      isNavbarOpen: false
     };
   }
 
-  toggle() {
+  navToggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      isNavbarOpen: !this.state.isNavbarOpen
     });
   }
 
@@ -36,42 +39,44 @@ class Header extends React.Component {
     return (
       <header>
         <Head>
+          <meta charSet="utf-8" />
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
           <title>Sample{this.props.title === "Homepage" ? '' : ` - ${this.props.title}`}</title>
         </Head>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">Sample</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/">Home</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/about">About</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="/contact-us">Contact Us</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
-        </Navbar>
+        <Container>
+          <Navbar light expand="md">
+            <NavbarBrand href="/">Sample</NavbarBrand>
+            <NavbarToggler onClick={this.navToggle} />
+            <Collapse isOpen={this.state.isNavbarOpen} navbar>
+              <Nav className="ml-auto" navbar>
+                <NavItem active={this.props.title === "About"}>
+                  <NavLink href="/about">About</NavLink>
+                </NavItem>
+                <NavItem active={this.props.title === "Contact Us"}>
+                  <NavLink href="/contact-us">Contact Us</NavLink>
+                </NavItem>
+                <NavItem>
+                  <UncontrolledDropdown nav inNavbar>
+                    <DropdownToggle nav caret>
+                    Options
+                    </DropdownToggle>
+                    <DropdownMenu right>
+                      <DropdownItem>
+                      Option 1
+                      </DropdownItem>
+                      <DropdownItem>
+                      Option 2
+                      </DropdownItem>
+                      <DropdownItem>
+                      Reset
+                      </DropdownItem>
+                    </DropdownMenu>
+                  </UncontrolledDropdown>
+                </NavItem>
+              </Nav>
+            </Collapse>
+          </Navbar>
+        </Container>
       </header>
     )
   }
