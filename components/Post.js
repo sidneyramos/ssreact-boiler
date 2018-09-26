@@ -16,18 +16,13 @@ import Layout from '../components/Layout.js'
 import HeroBanner from '../components/HeroBanner.js'
 import PostLink from '../components/PostLink.js'
 
-class Page extends React.Component {
+class Post extends React.Component {
 
   constructor(props) {
     super(props);
 
     this.state = {
       playerLoad: false,
-    }
-    
-    this.heroBannerBackground = this.props.heroBannerBackgroundStyle || {};
-    if (this.props.heroBannerBackgroundImage) {
-      this.heroBannerBackground.backgroundImage = `url(${this.props.heroBannerBackgroundImage})` ;
     }
   }
 
@@ -52,7 +47,6 @@ class Page extends React.Component {
             heroBannerBackground = {this.heroBannerBackground}
             playerLoad = {this.state.playerLoad}
         />
-        
 
         {this.props.children}
       </Layout>
@@ -60,4 +54,4 @@ class Page extends React.Component {
   }
 }
 
-export default Page
+export default Post

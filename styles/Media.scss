@@ -1,0 +1,23 @@
+.media {
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+//Showcase MediaList
+
+.media-list {
+  &.showcase {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    & > li.media {
+      width: 25%;
+      flex-wrap: wrap;
+      padding: 30px;
+      justify-content: center;
+    }
+  }
+}

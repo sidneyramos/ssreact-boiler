@@ -55,6 +55,9 @@ class Header extends React.Component {
                 <NavItem active={this.props.title === "Contact Us"}>
                   <NavLink href="/contact-us">Contact Us</NavLink>
                 </NavItem>
+                <NavItem active={this.props.title === "Blog"}>
+                  <NavLink href="/blog">Blog</NavLink>
+                </NavItem>
                 <NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret>

@@ -6,9 +6,7 @@ import {
 const Layout = (props) => (
   <div className="layout">
     <Header title={props.title}/>
-    <Container>
-      {props.children}
-    </Container>
+    {props.children}
   </div>
 )
 
