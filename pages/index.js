@@ -1,13 +1,15 @@
 import Link from 'next/link'
-import Page from '../components/Page.js'
 import {
   Jumbotron,
   Container,
   Button,
+  Row,
+  Col,
   Media
 } from 'reactstrap';
+import Ionicon from 'react-ionicons'
+import Page from '../components/Page.js'
 import MediaList from '../components/MediaList.js'
-
 
 export default () => (
   <Page
@@ -22,75 +24,67 @@ export default () => (
       text: 'Learn More',
     }}
     heroBannerBackgroundImage='/static/images/building.jpeg'
-    heroBannerBackgroundStyle={{
-      backgroundPositionY: `calc(100% - 130px)`,
-      backgroundSize: '100%',
-    }}
+    // heroBannerBackgroundStyle={{
+    //   backgroundPositionY: `calc(100% - 130px)`,
+    //   backgroundSize: '100%',
+    // }}
     heroBannerParallax
     >
 
     <Container>
-      <MediaList className="showcase">
-        <Media tag="li">
-          <Media left top href="#">
-            <Media object src="/static/images/about.jpeg" alt="Generic placeholder image" />
-          </Media>
-          <Media body>
-            <Media heading>
-              Top aligned media
+      <Row>
+        <Col md="12">
+          <MediaList className="showcase overlap-top">
+            <Media tag="li">
+              <Media left top href="#" className="mb-3">
+                <Ionicon icon="md-heart" fontSize="80px" color="red" beat />
+              </Media>
+              <Media body>
+                <Media heading className="mb-4">
+                  Top aligned media
+                </Media>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+              </Media>
             </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-        </Media>
 
-        <Media tag="li">
-          <Media left top href="#">
-            <Media object src="/static/images/about.jpeg" alt="Generic placeholder image" />
-          </Media>
-          <Media body>
-            <Media heading>
-              Top aligned media
+            <Media tag="li">
+              <Media left top href="#" className="mb-3">
+                <Ionicon icon="ios-refresh" fontSize="80px" color="#347eff" rotate />
+              </Media>
+              <Media body>
+                <Media heading className="mb-4">
+                  Top aligned media
+                </Media>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+              </Media>
             </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-        </Media>
 
-        <Media tag="li">
-          <Media left top href="#">
-            <Media object src="/static/images/about.jpeg" alt="Generic placeholder image" />
-          </Media>
-          <Media body>
-            <Media heading>
-              Top aligned media
+            <Media tag="li">
+              <Media left top href="#" className="mb-3">
+                <Ionicon icon="md-pizza" shake fontSize="80px" color="orange" />
+              </Media>
+              <Media body>
+                <Media heading className="mb-4">
+                  Top aligned media
+                </Media>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+              </Media>
             </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-        </Media>
 
-        <Media tag="li">
-          <Media left top href="#">
-            <Media object src="/static/images/about.jpeg" alt="Generic placeholder image" />
-          </Media>
-          <Media body>
-            <Media heading>
-              Top aligned media
+            <Media tag="li">
+              <Media left top href="#" className="mb-3">
+                <Ionicon icon="md-infinite" fontSize="80px" rotate />
+              </Media>
+              <Media body>
+                <Media heading className="mb-4">
+                  Top aligned media
+                </Media>
+                <p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo.</p>
+              </Media>
             </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-        </Media>
-
-        <Media tag="li">
-          <Media body>
-            <Media heading>
-              Media heading
-            </Media>
-            Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-          </Media>
-          <Media right href="#">
-            <Media object src="/static/images/about.jpeg" alt="Generic placeholder image" />
-          </Media>
-        </Media>
-      </MediaList>
+          </MediaList>
+        </Col>
+      </Row>
 
     </Container>
   </Page>
