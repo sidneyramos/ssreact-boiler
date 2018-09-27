@@ -1,0 +1,37 @@
+.testimonials {
+  margin-bottom: 8em;
+
+  .quote {
+    line-height: 1;
+    position: relative;
+    font-size: 100px;
+    color: #000;
+    text-align: center;
+  }
+
+  .testimonial {
+    p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 18px;
+    }
+  }
+
+  .testimonial-indicators {
+    bottom: auto;
+    margin-top: 1em;
+
+    li {
+      width: auto;
+      height: auto;
+      button {
+        width: 35px;
+        height: 35px;
+        &:before {
+          font-size: 30px;
+          position: static;
+        }
+      }
+    }
+  }
+}

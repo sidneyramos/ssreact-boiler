@@ -29,7 +29,9 @@
     "react-dom": "^16.4.0",
     "react-ionicons": "^2.1.6",
     "react-pose": "^3.3.4",
+    "react-slick": "^0.23.1",
     "reactstrap": "^6.4.0",
+    "slick-carousel": "^1.8.1",
     "style-loader": "^0.23.0",
     "video-react": "^0.13.0"
   },

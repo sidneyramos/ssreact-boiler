@@ -1,10 +1,16 @@
 @import "~video-react/styles/scss/video-react";
+@import "~slick-carousel/slick/slick.scss";
+@import "~slick-carousel/slick/slick-theme.scss";
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
 @import url('Jumbotron.scss');
 @import url('Video.scss');
 @import url('Image.scss');
 @import url('HeroBanner.scss');
 @import url('Media.scss');
+@import url('Carousel.scss');
+@import url('SplitColumnBlock.scss');
+@import url('Testimonials.scss');
+
 
 * {
   font-family: 'Work Sans';

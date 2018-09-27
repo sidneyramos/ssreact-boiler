@@ -39,7 +39,7 @@ const HeroBanner = (props) => (
               props.heroBannerButton &&
               <p className="lead">
                 <Link href={props.heroBannerButton.url}>
-                  <Button color="primary">{props.heroBannerButton.text}</Button>
+                  <Button color={props.heroBannerButton.color}>{props.heroBannerButton.text}</Button>
                 </Link>
               </p>
             }

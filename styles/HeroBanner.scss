@@ -11,6 +11,10 @@
 
 .hero-banner-container {
   min-height: 700px;
+  @media (max-width: 768px) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
 
   .hero-banner {
     min-height: 700px;
