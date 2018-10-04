@@ -16,6 +16,10 @@
     padding-bottom: 3em;
   }
 
+  @media (min-width: 767px) and (max-width: 991px) {
+    padding-top: 150px;
+  }
+
   .hero-banner {
     min-height: 700px;
   }
