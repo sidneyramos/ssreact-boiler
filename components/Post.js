@@ -14,7 +14,6 @@ import {
 } from 'reactstrap';
 import Layout from '../components/Layout.js'
 import HeroBanner from '../components/HeroBanner.js'
-import PostLink from '../components/PostLink.js'
 
 class Post extends React.Component {
 
@@ -35,7 +34,7 @@ class Post extends React.Component {
   render() {
     return (
       <Layout title={this.props.title}>
-        <HeroBanner 
+        <HeroBanner
             heroBannerParallax = {this.props.heroBannerParallax}
             headerFullWidth = {this.props.headerFullWidth}
             heroBannerTitle = {this.props.heroBannerTitle}

@@ -13,7 +13,6 @@ import {
   Col
 } from 'reactstrap';
 import Layout from '../components/Layout.js'
-import PostLink from '../components/PostLink.js'
 
 const HeroBanner = (props) => (
   <div className={classNames("hero-banner-background", {"parallax": props.heroBannerParallax})} style={props.heroBannerBackground}>

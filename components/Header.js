@@ -52,9 +52,6 @@ class Header extends React.Component {
                 <NavItem active={this.props.title === "About"}>
                   <NavLink href="/about">About</NavLink>
                 </NavItem>
-                <NavItem active={this.props.title === "Contact Us"}>
-                  <NavLink href="/contact-us">Contact Us</NavLink>
-                </NavItem>
                 <NavItem active={this.props.title === "Blog"}>
                   <NavLink href="/blog">Blog</NavLink>
                 </NavItem>
@@ -75,6 +72,10 @@ class Header extends React.Component {
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
+                </NavItem>
+
+                <NavItem active={this.props.title === "Contact Us"}>
+                  <NavLink href="/contact-us">Contact Us</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>

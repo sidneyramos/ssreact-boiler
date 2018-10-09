@@ -8,6 +8,8 @@ import {
   Media,
   UncontrolledCarousel
 } from 'reactstrap';
+import Slider from "react-slick";
+
 
 import Page from '../components/Page.js'
 import MediaList from '../components/MediaList.js'
@@ -30,22 +32,24 @@ const About = () => (
         "<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"}
     />
     <Container fluid>
-      <UncontrolledCarousel
-        items={[
-          {
-            src: '/static/images/slider-1.jpg',
-            altText: 'Slide 1'
-          },
-          {
-            src: '/static/images/slider-2.jpg',
-            altText: 'Slide 2'
-          },
-          {
-            src: '/static/images/slider-3.jpg',
-            altText: 'Slide 3'
-          }
-        ]}
-      />
+      <Slider
+        dots
+        infinite
+        speed={500}
+        slidesToShow={1}
+        slidesToScroll={1}
+        className="carousel"
+        >
+        <div className="slide-container">
+          <img src="/static/images/slider-1.jpg" />
+        </div>
+        <div className="slide-container">
+          <img src="/static/images/slider-2.jpg" />
+        </div>
+        <div className="slide-container">
+          <img src="/static/images/slider-3.jpg" />
+        </div>
+      </Slider>
     </Container>
 
     <Background type="light">

@@ -14,7 +14,6 @@ import {
 } from 'reactstrap';
 import Layout from '../components/Layout.js'
 import HeroBanner from '../components/HeroBanner.js'
-import PostLink from '../components/PostLink.js'
 
 class Page extends React.Component {
 
@@ -24,7 +23,7 @@ class Page extends React.Component {
     this.state = {
       playerLoad: false,
     }
-    
+
     this.heroBannerBackground = this.props.heroBannerBackgroundStyle || {};
     if (this.props.heroBannerBackgroundImage) {
       this.heroBannerBackground.backgroundImage = `url(${this.props.heroBannerBackgroundImage})` ;
@@ -40,7 +39,7 @@ class Page extends React.Component {
   render() {
     return (
       <Layout title={this.props.title}>
-        <HeroBanner 
+        <HeroBanner
             heroBannerParallax = {this.props.heroBannerParallax}
             headerFullWidth = {this.props.headerFullWidth}
             heroBannerTitle = {this.props.heroBannerTitle}
@@ -52,7 +51,7 @@ class Page extends React.Component {
             heroBannerBackground = {this.heroBannerBackground}
             playerLoad = {this.state.playerLoad}
         />
-        
+
 
         {this.props.children}
       </Layout>

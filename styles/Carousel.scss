@@ -1,12 +1,56 @@
 .carousel {
-  .slick-slide {
-    & > div {
-      div {
-        max-height: 500px;
-        overflow: hidden;
+  .slide-container {
+    max-height: 700px;
+    overflow: hidden;
 
-        img {
-          width: 100%;
+    img {
+      width: 100%;
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    z-index: 1;
+    background: rgba(0,0,0,0.5);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    opacity: 50%;
+
+    &:hover {
+      opacity: 100%;
+      background: black;
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+    margin-left: 30px;
+  }
+
+  .slick-next {
+    right: 0;
+    margin-right: 30px;
+
+  }
+
+  .slick-dots {
+    bottom: 25px;
+
+    li {
+      button {
+        &:before {
+          font-size: 25px;
+          z-index: 1;
+          color: white;
+        }
+      }
+
+      &.slick-active {
+        button {
+          &:before {
+            color: white;
+          }
         }
       }
     }

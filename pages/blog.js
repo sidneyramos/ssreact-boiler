@@ -1,5 +1,5 @@
 import Page from '../components/Page'
-import PostLink from '../components/PostLink.js'
+import Link from 'next/link'
 import {
   Container
 } from 'reactstrap'
@@ -17,12 +17,18 @@ const Blog = () => (
   <Page
     title="Blog"
     heroBannerTitle="This ain't a blog"
+    heroBannerDescription="This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information."
+    heroBannerBackgroundImage='/static/images/blog-banner-1.jpg'
   >
     <Container>
       <h1>Blog Posts</h1>
       <ul>
         {getPosts().map((post) => (
-          <PostLink key={post.id} post={post}/>
+          <li>
+            <Link href={`/p/${post.id}`}>
+              <a>{post.title}</a>
+            </Link>
+          </li>
         ))}
       </ul>
     </Container>
