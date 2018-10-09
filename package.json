@@ -9,7 +9,14 @@
     "start": "NODE_ENV=production node server.js"
   },
   "now": {
-    "alias": "ssreact-boiler.now.sh"
+    "name": "ssreact-boiler",
+    "alias": "ssreact-boiler.now.sh",
+    "scale": {
+      "sfo1": {
+        "min": 1,
+        "max": 1
+      }
+    }
   },
   "keywords": [],
   "author": "Sidney Ramos",
