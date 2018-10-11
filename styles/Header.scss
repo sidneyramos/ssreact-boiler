@@ -1,0 +1,96 @@
+// Navbar Styling
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('/static/fonts/icomoon/fonts/icomoon.eot?o65wfh');
+  src:  url('/static/fonts/icomoon/fonts/icomoon.eot?o65wfh#iefix') format('embedded-opentype'),
+    url('/static/fonts/icomoon/fonts/icomoon.ttf?o65wfh') format('truetype'),
+    url('/static/fonts/icomoon/fonts/icomoon.woff?o65wfh') format('woff'),
+    url('/static/fonts/icomoon/fonts/icomoon.svg?o65wfh#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ionicons";
+  src: url("/static/fonts/ionicons/fonts/ionicons/fonts/ionicons.eot?v=2.0.0");
+  src: url("/static/fonts/ionicons/fonts/ionicons/fonts/ionicons.eot?v=2.0.0#iefix") format("embedded-opentype"),
+   url("/static/fonts/ionicons/fonts/ionicons/fonts/ionicons.ttf?v=2.0.0") format("truetype"),
+    url("/static/fonts/ionicons/fonts/ionicons/fonts/ionicons.woff?v=2.0.0") format("woff"),
+     url("/static/fonts/ionicons/fonts/ionicons/fonts/ionicons.svg?v=2.0.0#Ionicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+header {
+  padding: 40px 0;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    width: 100%;
+  }
+}
+
+.navbar {
+
+  .nav-item {
+    &.dropdown {
+      .nav-link {
+        padding-right: 20px;
+        position: relative;
+      }
+
+      .dropdown-menu {
+        .dropdown-item {
+          font-size: 13px;
+          letter-spacing: .1em;
+        }
+      }
+    }
+
+    .nav-link {
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: .1em;
+    }
+  }
+
+  .navbar-toggler {
+    border: none;
+    padding: 0;
+  }
+
+  .dropdown-toggle {
+    &:after {
+      display: initial;
+      width: initial;
+      height: initial;
+      margin-left: initial;
+      vertical-align: initial;
+      border-top: initial;
+      border-right: initial;
+      border-bottom: initial;
+      border-left: initial;
+
+      font-family:'icomoon';
+      top:50%;
+      right:0;
+      content:"\e313";
+      position:absolute;
+      -webkit-transform:translateY(-50%);
+      -ms-transform:translateY(-50%);
+      transform:translateY(-50%)
+    }
+  }
+
+  .dropdown-item {
+    &:focus {
+      background-color: #f8f9fa;
+    }
+
+    &:active {
+      background-color: rgba(0,0,0,0.9);
+    }
+
+  }
+}

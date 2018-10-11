@@ -1,0 +1,26 @@
+.hero-banner-background {
+  background-size: cover;
+
+  &.parallax {
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+}
+
+.hero-banner-container {
+  min-height: 700px;
+  @media (max-width: 768px) {
+    padding-top: 3em;
+    padding-bottom: 3em;
+  }
+
+  @media (min-width: 767px) and (max-width: 991px) {
+    padding-top: 150px;
+  }
+
+  .hero-banner {
+    min-height: 700px;
+  }
+}
