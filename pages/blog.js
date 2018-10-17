@@ -1,4 +1,5 @@
 import Page from '../components/Page'
+import PostCollection from '../components/PostCollection'
 import Link from 'next/link'
 import {
   Container
@@ -7,9 +8,9 @@ import {
 
 function getPosts () {
   return [
-    { id: 'blogpost-1', title: 'Sample Post 1'},
-    { id: 'blogpost-2', title: 'Sample Post 2'},
-    { id: 'blogpost-3', title: 'Sample Post 3'},
+    { id: 'blogpost-1', title: 'Sample Post 1', image: '/static/images/slider-1.jpg'},
+    { id: 'blogpost-2', title: 'Sample Post 2', image: '/static/images/slider-2.jpg'},
+    { id: 'blogpost-3', title: 'Sample Post 3', image: '/static/images/slider-3.jpg'},
   ]
 }
 
@@ -21,16 +22,9 @@ const Blog = () => (
     heroBannerBackgroundImage='/static/images/blog-banner-1.jpg'
   >
     <Container>
-      <h1>Blog Posts</h1>
-      <ul>
-        {getPosts().map((post) => (
-          <li>
-            <Link href={`/p/${post.id}`}>
-              <a>{post.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <PostCollection
+        posts={getPosts()}
+      />
     </Container>
   </Page>
 )
