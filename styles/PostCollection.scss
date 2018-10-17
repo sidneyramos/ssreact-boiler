@@ -1,0 +1,44 @@
+.post-collection {
+  padding: 7em 0;
+
+  .card {
+    height: 400px;
+    overflow: hidden;
+    background-size: auto 100%;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: #000;
+      z-index: 1;
+      opacity: .3;
+      -webkit-transition: .3s all ease;
+      -o-transition: .3s all ease;
+      transition: .3s all ease;
+    }
+
+    &:hover {
+      &:before {
+        opacity: .5;
+      }
+    }
+
+    .card-body {
+      position: absolute;
+      z-index: 2;
+      .card-title {
+        color: white;
+      }
+    }
+
+    img {
+      height: 100%;
+      width: auto;
+      border-radius: 0;
+    }
+  }
+}
