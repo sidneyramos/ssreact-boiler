@@ -19,6 +19,7 @@ import Header from './Header'
 export const posts = gql`
   query getPosts {
     posts {
+      id
       title
       image
     }
@@ -32,28 +33,29 @@ class PostCollection extends Component {
   }
 
   render() {
-    console.log(this.props.data);
     const { props } = this;
+    const { posts } = this.props.data;
+
+    console.log(posts);
 
     return (
       <div className="post-collection">
         <Row>
-          {/*props.posts.map((post) => (
-            <Col md={4} sm={12}>
-              <Link href={`/p/${post.id}`}>
-                <a>
-                  <Card style={{backgroundImage: `url('${post.image}')`}}>
-                    <CardBody>
-                      <CardTitle>{post.title}</CardTitle>
-                    </CardBody>
-                  </Card>
-                </a>
-              </Link>
-            </Col>
-          ))*/}
-          <Col md={4} sm={12}>
-            <h2>Sample</h2>
-          </Col>
+          {
+            posts.map((post) => (
+              <Col md={4} sm={12}>
+                <Link href={`/p/${post.id}`}>
+                  <a>
+                    <Card style={{backgroundImage: `url('${post.image}')`}}>
+                      <CardBody>
+                        <CardTitle>{post.title}</CardTitle>
+                      </CardBody>
+                    </Card>
+                  </a>
+                </Link>
+              </Col>
+            ))
+          }
         </Row>
       </div>
     );
