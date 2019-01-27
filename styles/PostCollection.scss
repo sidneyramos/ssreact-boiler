@@ -1,6 +1,12 @@
 .post-collection {
   padding: 7em 0;
 
+  .row {
+    & > div {
+      padding: 15px;
+    }
+  }
+
   .card {
     height: 400px;
     overflow: hidden;
