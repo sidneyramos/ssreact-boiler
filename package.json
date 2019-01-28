@@ -6,7 +6,18 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "NODE_ENV=production node server.js",
+    "deploy": "now --public && now alias"
+  },
+  "now": {
+    "name": "ssreact-boiler",
+    "alias": "ssreact-boiler.now.sh",
+    "scale": {
+      "sfo1": {
+        "min": 1,
+        "max": 1
+      }
+    }
   },
   "keywords": [],
   "author": "Sidney Ramos",
@@ -28,13 +39,13 @@
     "graphql-anywhere": "^4.0.1",
     "graphql-tag": "^2.5.0",
     "isomorphic-unfetch": "^2.1.1",
-    "next": "^7.0.0",
+    "next": "^7.0.2",
     "node-sass": "^4.9.3",
     "postcss-loader": "^3.0.0",
     "prop-types": "^15.6.0",
+    "react": "^16.4.0",
     "react-accessible-accordion": "^2.4.4",
     "react-apollo": "^2.0.1",
-    "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-ionicons": "^2.1.6",
     "react-loader": "^2.4.5",
