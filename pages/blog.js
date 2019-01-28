@@ -1,9 +1,10 @@
-import Page from '../components/Page'
-import PostCollection from '../components/PostCollection'
 import Link from 'next/link'
 import {
   Container
 } from 'reactstrap'
+import Page from '../components/Page'
+import PostCollection from '../components/PostCollection'
+import withData from '../lib/withData'
 
 
 function getPosts () {
@@ -14,7 +15,7 @@ function getPosts () {
   ]
 }
 
-const Blog = () => (
+const Blog = withData(props => (
   <Page
     title="Blog"
     heroBannerTitle="This ain't a blog"
@@ -27,6 +28,6 @@ const Blog = () => (
       />
     </Container>
   </Page>
-)
+))
 
 export default Blog

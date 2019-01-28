@@ -15,8 +15,9 @@ import MediaList from '../components/MediaList.js'
 import SplitColumnBlock from '../components/SplitColumnBlock.js'
 import Background from '../components/Background.js'
 import Testimonials from '../components/Testimonials.js'
+import withData from '../lib/withData'
 
-export default () => (
+export default withData(props => (
   <Page
     title={"Homepage"}
     heroBannerTitle="Hello, world! This is a homepage."
@@ -101,32 +102,16 @@ export default () => (
         slidesToScroll={1}
         className="carousel"
         >
-        <div>
+        <div className="slide-container">
           <img src="/static/images/slider-1.jpg" />
         </div>
-        <div>
+        <div className="slide-container">
           <img src="/static/images/slider-2.jpg" />
         </div>
-        <div>
+        <div className="slide-container">
           <img src="/static/images/slider-3.jpg" />
         </div>
       </Slider>
-      {/*<UncontrolledCarousel
-        items={[
-          {
-            src: '/static/images/slider-1.jpg',
-            altText: 'Slide 1'
-          },
-          {
-            src: '/static/images/slider-2.jpg',
-            altText: 'Slide 2'
-          },
-          {
-            src: '/static/images/slider-3.jpg',
-            altText: 'Slide 3'
-          }
-        ]}
-      />*/}
     </Container>
 
     <Background type="light">
@@ -209,4 +194,4 @@ export default () => (
       />
     </Container>
   </Page>
-)
+))
