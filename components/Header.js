@@ -55,27 +55,26 @@ class Header extends React.Component {
                 <NavItem active={this.props.title === "Blog"}>
                   <NavLink href="/blog">Blog</NavLink>
                 </NavItem>
+                <NavItem active={this.props.title === "Contact Us"}>
+                  <NavLink href="/contact-us">Contact Us</NavLink>
+                </NavItem>
                 <NavItem>
                   <UncontrolledDropdown nav inNavbar>
                     <DropdownToggle nav caret>
                     Options
                     </DropdownToggle>
-                    <DropdownMenu right>
+                    <DropdownMenu>
                       <DropdownItem>
-                      Option 1
+                        Option 1
                       </DropdownItem>
                       <DropdownItem>
-                      Option 2
+                        Option 2
                       </DropdownItem>
                       <DropdownItem>
-                      Reset
+                        Reset
                       </DropdownItem>
                     </DropdownMenu>
                   </UncontrolledDropdown>
-                </NavItem>
-
-                <NavItem active={this.props.title === "Contact Us"}>
-                  <NavLink href="/contact-us">Contact Us</NavLink>
                 </NavItem>
               </Nav>
             </Collapse>
