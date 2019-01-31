@@ -31,3 +31,13 @@
   background: #ff1c68;
   transform-origin: 50% 50%;
 }
+
+a {
+  transition: .3s all ease;
+  color: #000;
+
+  &:hover {
+    text-decoration: none;
+    color: #565656;
+  }
+}
