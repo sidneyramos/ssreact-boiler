@@ -4,9 +4,9 @@
   "description": "This is a boilerplate for server-side react apps using Next.js",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "deploy": "now --public && now alias"
   },
   "now": {

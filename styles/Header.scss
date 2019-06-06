@@ -22,51 +22,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'HK Grotesk';
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Light.eot');
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Light.woff') format('woff'),
-    url('/static/fonts/HkGrotesk/HKGrotesk-Light.woff2') format('svg');
-  font-weight: 300;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HK Grotesk';
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Regular.eot');
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Regular.woff') format('woff'),
-    url('/static/fonts/HkGrotesk/HKGrotesk-Regular.woff2') format('svg');
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HK Grotesk';
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Medium.eot');
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Medium.woff') format('woff'),
-    url('/static/fonts/HkGrotesk/HKGrotesk-Medium.woff2') format('svg');
-  font-weight: 500;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HK Grotesk';
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-SemiBold.eot');
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-SemiBold.woff') format('woff'),
-    url('/static/fonts/HkGrotesk/HKGrotesk-SemiBold.woff2') format('svg');
-  font-weight: 600;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'HK Grotesk';
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Bold.eot');
-  src:  url('/static/fonts/HkGrotesk/HKGrotesk-Bold.woff') format('woff'),
-    url('/static/fonts/HkGrotesk/HKGrotesk-Bold.woff2') format('svg');
-  font-weight: 700;
-  font-style: normal;
-}
-
 header {
   padding: 40px 0;
 
@@ -97,40 +52,12 @@ header {
       text-transform: uppercase;
       font-size: 13px;
       letter-spacing: .1em;
-      color: #303030;
-      font-family: 'Work Sans';
     }
   }
 
   .navbar-toggler {
     border: none;
     padding: 0;
-
-    .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml,<svg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>");
-    }
-  }
-
-  .navbar-brand {
-    div {
-      line-height: 1.2em;
-
-      span {
-        display: inline-flex;
-        width: 20px;
-        height: 20px;
-        justify-content: center;
-        align-items: center;
-        font-family: 'Work Sans';
-
-        p {
-          margin-bottom: 0;
-          &.barrier {
-            color: #6a2e35;
-          }
-        }
-      }
-    }
   }
 
   .dropdown-toggle {
