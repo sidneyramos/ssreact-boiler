@@ -36,13 +36,15 @@ class PostCollection extends Component {
     const { props } = this;
     const { posts } = this.props.data;
 
+    console.log(posts);
+
     return (
       <div className="post-collection">
         <Row>
           {
             posts.map((post) => (
               <Col md={4} sm={12}>
-                <Link href={`/post?id=${post.id}`}>
+                <Link href={`/p/${post.id}`}>
                   <a>
                     <Card style={{backgroundImage: `url('${post.image}')`}}>
                       <CardBody>
