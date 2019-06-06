@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { Fragment } from 'react'
 import {
   Jumbotron,
   Container,
@@ -9,6 +10,7 @@ import {
   UncontrolledCarousel
 } from 'reactstrap';
 import Slider from "react-slick";
+import Ionicon from 'react-ionicons'
 
 import Page from '../components/Page.js'
 import MediaList from '../components/MediaList.js'
@@ -20,67 +22,95 @@ import withData from '../lib/withData'
 export default withData(props => (
   <Page
     title={"Homepage"}
-    heroBannerTitle="Daylight and everything."
-    //headerVideoUrl={"https://storage.googleapis.com/coverr-main/mp4/Travaho.mp4"}
-    headerImageUrl={"/static/images/banner-image.jpeg"}
-    heroBannerDescription="Bender, this is Fry's decision… and he made it wrong. So it's time for us to interfere in his life. She also liked to shut up! Oh yeah, good luck with that. I haven't felt much of anything since my guinea pig died."
-    heroBannerSmallDescription="Quite possible. We live long and are celebrated poopers."
+    heroBannerTitle={<span>Unlock your business <span className="highlight">potential</span></span>}
+    heroBannerDescription={
+      <Fragment>
+        <span className="description">Be <span className="highlight">one step</span> ahead of your competitors through digital transformation</span>
+        {/*<span className="categories">
+          <Ionicon
+            icon="ios-build-outline"
+            fontSize="40px"
+            color="#6a2e35"
+          />
+          {` Web `}
+          <span className="divider">|</span>
+          {` Mobile `}
+          <span className="divider">|</span>
+          {` Chatbot Development`}
+        </span>
+        <span className="categories">
+          <Ionicon
+          icon="ios-easel-outline"
+          fontSize="40px"
+          color="#6a2e35"
+          />
+          {` UI `}
+          <span className="divider">|</span>
+          {` UX Design`}
+        </span>
+        <span className="categories">
+          <Ionicon
+          icon="ios-paper-outline"
+          fontSize="40px"
+          color="#6a2e35"
+          />
+          {` Content `}
+          <span className="divider">|</span>
+          {` Social Media Management`}
+        </span>*/}
+      </Fragment>
+    }
     heroBannerButton={{
       url: '#',
-      text: 'Learn More'
+      text: 'Get started',
+      color: 'primary',
+      customProps: {
+        size: 'lg',
+      }
     }}
-    heroBannerBackgroundImage='/static/images/building.jpeg'
-    // heroBannerBackgroundStyle={{
-    //   backgroundPositionY: `calc(100% - 130px)`,
-    //   backgroundSize: '100%',
-    // }}
-    heroBannerParallax
+    headerFullWidth
+    headerTextProps={{
+      lg: {
+        size: 8,
+        offset: 2,
+      }
+    }}
     >
 
     <Container>
       <Row>
         <Col md="12">
+          <h1 className="display-4 bold">We are R<span className="highlight">|</span>202.</h1>
+          <h2 className="">We're crazy about three things.</h2>
+
           <MediaList className="showcase"
-            overlapTop
             items={[
               {
                 icon: {
-                  icon: "md-heart",
+                  icon: "ios-build-outline",
                   fontSize: "80px",
-                  color: "red",
-                  beat: true
+                  color: "#6a2e35",
                 },
-                headingText: "Subjugated, yet honored.",
+                headingText: "Tailor-fit Technology",
                 bodyText: "Oh Leela! You're the only person I could turn to; you're the only person who ever loved me."
               },
               {
                 icon: {
-                  icon: "ios-refresh",
+                  icon: "ios-easel-outline",
                   fontSize: "80px",
-                  color: "#347eff",
-                  rotate: true,
+                  color: "#6a2e35",
                 },
-                headingText: "Your lyrics lack subtlety",
+                headingText: "Growth-driven Design",
                 bodyText: "Enough about your promiscuous mother, Hermes! We have bigger problems."
               },
               {
                 icon: {
-                  icon: "md-pizza",
+                  icon: "ios-paper-outline",
                   fontSize: "80px",
-                  color: "orange",
-                  shake: true
+                  color: "#6a2e35",
                 },
-                headingText: "That makes me feel angry",
+                headingText: "Purposeful Content",
                 bodyText: "Of all the friends I've had… you're the first. You wouldn't. Ask anyway! Wow, you got that off the Internet? In my day, the Internet was only used to download pornography. Why would a robot need to drink?"
-              },
-              {
-                icon: {
-                  icon: "md-infinite",
-                  fontSize: "80px",
-                  rotate: true
-                },
-                headingText: "This opera's as lousy as it is brilliant",
-                bodyText: "You'll have all the Slurm you can drink when you're partying with Slurms McKenzie!"
               }
             ]}
           />
@@ -88,7 +118,7 @@ export default withData(props => (
       </Row>
     </Container>
     <SplitColumnBlock
-      heading="Maybe I love you so much I love you no matter who you are pretending to be. "
+      heading="Sample "
       leadText="Far far away, behind the word mountains, <a href='#'>far from the countries Neyeyeye and ASDasldjkasld</a>, there live the blind texts. Separated they live in asdasdasd right at the coast of the Semantics, a large language ocean."
       subtitle={
         "<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p><p>A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth.</p>"}

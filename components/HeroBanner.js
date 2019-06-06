@@ -18,12 +18,12 @@ const HeroBanner = (props) => (
   <div className={classNames("hero-banner-background", {"parallax": props.heroBannerParallax})} style={props.heroBannerBackground}>
     <Container className="hero-banner-container">
       <Row className="hero-banner align-items-lg-center">
-        <Col lg={!props.headerFullWidth ? 6 : null}>
+        <Col lg={!props.headerFullWidth ? 6 : null} {...props.headerTextProps}>
           <Jumbotron className={classNames("transparent", "clear-padding")}>
-            <h1 className="display-4">{props.heroBannerTitle}</h1>
+            <h1 className="display-4 hero-banner-title">{props.heroBannerTitle}</h1>
             {
               props.heroBannerDescription &&
-              <p className="lead">
+              <p className="lead hero-banner-description">
               { props.heroBannerDescription }
               </p>
             }
@@ -38,7 +38,7 @@ const HeroBanner = (props) => (
               props.heroBannerButton &&
               <p className="lead">
                 <Link href={props.heroBannerButton.url}>
-                  <Button color={props.heroBannerButton.color}>{props.heroBannerButton.text}</Button>
+                  <Button color={props.heroBannerButton.color} {...props.heroBannerButton.customProps}>{props.heroBannerButton.text}</Button>
                 </Link>
               </p>
             }

@@ -2,6 +2,7 @@
 @import "~slick-carousel/slick/slick.scss";
 @import "~slick-carousel/slick/slick-theme.scss";
 @import url('https://fonts.googleapis.com/css?family=Work+Sans:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
 @import url('Jumbotron.scss');
 @import url('Video.scss');
 @import url('Image.scss');
@@ -14,7 +15,17 @@
 
 
 * {
-  font-family: 'Work Sans';
+  // font-family: 'Work Sans';
+  font-family: 'HK Grotesk';
+}
+
+body {
+  color: #303030;
+  font-size: initial;
+}
+
+.highlight {
+  color: #6a2e35;
 }
 
 .transparent {
@@ -40,4 +51,20 @@ a {
     text-decoration: none;
     color: #565656;
   }
+}
+
+.divider {
+  color: #6a2e35;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+.semi-bold {
+  font-weight: 500;
+}
+
+.light {
+  font-weight: 300;
 }

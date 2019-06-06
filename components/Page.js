@@ -40,18 +40,18 @@ class Page extends React.Component {
     return (
       <Layout title={this.props.title}>
         <HeroBanner
-            heroBannerParallax = {this.props.heroBannerParallax}
-            headerFullWidth = {this.props.headerFullWidth}
-            heroBannerTitle = {this.props.heroBannerTitle}
-            heroBannerDescription = {this.props.heroBannerDescription}
-            heroBannerSmallDescription = {this.props.heroBannerSmallDescription}
-            heroBannerButton = {this.props.heroBannerButton}
-            headerVideoUrl = {this.props.headerVideoUrl}
-            headerImageUrl = {this.props.headerImageUrl}
-            heroBannerBackground = {this.heroBannerBackground}
-            playerLoad = {this.state.playerLoad}
-        />
-
+          heroBannerParallax = {this.props.heroBannerParallax}
+          headerFullWidth = {this.props.headerFullWidth}
+          heroBannerTitle = {this.props.heroBannerTitle}
+          heroBannerDescription = {this.props.heroBannerDescription}
+          heroBannerSmallDescription = {this.props.heroBannerSmallDescription}
+          heroBannerButton = {this.props.heroBannerButton}
+          headerVideoUrl = {this.props.headerVideoUrl}
+          headerImageUrl = {this.props.headerImageUrl}
+          heroBannerBackground = {this.heroBannerBackground}
+          playerLoad = {this.state.playerLoad}
+          headerTextProps = {this.props.headerTextProps}
+          />
 
         {this.props.children}
       </Layout>

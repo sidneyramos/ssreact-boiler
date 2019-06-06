@@ -41,11 +41,15 @@ class Header extends React.Component {
         <Head>
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-          <title>Sample{this.props.title === "Homepage" ? '' : ` - ${this.props.title}`}</title>
+          <title>R|202{this.props.title === "Homepage" ? '' : ` - ${this.props.title}`}</title>
         </Head>
         <Container>
-          <Navbar light expand="md">
-            <NavbarBrand href="/">Sample</NavbarBrand>
+          <Navbar expand="md">
+            <NavbarBrand href="/">
+              <div>
+                <span><p>R</p><p className="barrier">|</p><strong>202</strong></span>
+              </div>
+            </NavbarBrand>
             <NavbarToggler onClick={this.navToggle} />
             <Collapse isOpen={this.state.isNavbarOpen} navbar>
               <Nav className="ml-auto" navbar>

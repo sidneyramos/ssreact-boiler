@@ -1,1 +1,27 @@
-{"pages":{},"css":[],"bundles/pages/index.js":["bundles/pages/index.js"],"bundles/pages/_error.js":["bundles/pages/_error.js"],"bundles/pages/_app.js":["bundles/pages/_app.js"],"bundles/pages/post.js":["bundles/pages/post.js"],"bundles/pages/about.js":["bundles/pages/about.js"],"main.js":["static/commons/main-722407c6ce79d4cc60eb.js"]}
+{
+  "devFiles": [
+    "static/development/dll/dll_427de849df07de4942aa.js"
+  ],
+  "pages": {
+    "/_app": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/_error": [
+      "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/index": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
+    "/": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ]
+  }
+}

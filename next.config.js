@@ -3,4 +3,5 @@ module.exports = withSass({
   cssLoaderOptions: {
     url: false,
   },
+  target: "serverless",
 })
